@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Split Layout</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .split {
+            height: 50%;
+            width: 100%;
+            position: fixed;
+            overflow-y: hidden;
+        }
+        .top {
+            top: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .bottom {
+            bottom: 0;
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .content {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="split top">
+        <div class="content">
+            <h1>Top Side</h1>
+            <p>Some content on the top side.</p>
+        </div>
+    </div>
+    <div class="split bottom">
+        <div class="content">
+            <h1>Bottom Side</h1>
+            <p>Some content on the bottom side.</p>
+        </div>
+    </div>
+</body>
+</html>
